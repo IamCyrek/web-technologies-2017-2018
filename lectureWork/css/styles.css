@@ -44,6 +44,9 @@ table {
 
 /*---------------------------------------*/
 
+p {
+    margin-left: 25px;
+}
 .top {
     background-color: rgb(103, 58, 183);
     height: 278px;
@@ -95,5 +98,5 @@ table {
     font-weight: bold;
 }
 .lastdiv {
-    padding-top: 34px;
+    padding: 25px;
 }
