@@ -50,34 +50,33 @@ table {
 
 /*---------------------------------------*/
 
-/*header {
-    display: flex;
-    !*justify-content: space-between;*!
-    flex-wrap: nowrap;
-    background: black;
-    align-items: center;
-}*/
-
 @media (max-width: 1077px) {
-    .navbar {
+    .navbar-ul {
         display: none;
     }
 }
 
 @media (max-width: 992px) {
-    body header, .navsearch {
+    body header {
+        display: none;
+    }
+}
+
+@media (max-width: 1335px) {
+    .navsearch {
         display: none;
     }
 }
 
 @media (min-width: 992px) {
-    .navbuton {
+    .navbuton, .bottom_menu {
         display: none;
     }
 }
 
 body {
     background-color: #e1e1e2;
+    margin-bottom: 47px;
 }
 
 body div img {
@@ -221,7 +220,6 @@ header {
 
 .navbar-ul {
     float: left;
-
 }
 
 .navbar-ul a {
@@ -289,10 +287,82 @@ header {
 
 
 .navsearch {
-    align-content: right;
-    position: inherit;
-    right: 7px;
-    top: 0;
-    color: white;
-    font-size: 26px;
+    float: right;
+    position: relative;
+    border: 1px solid white;
+    height: 30px;
+    padding: 0 25px 0 10px;
+    width: 235px;
+    line-height: 30px;
+    font-family: "Noto Sans",sans-serif;
+    background: transparent;
+    color: #FFFFFF;
+}
+
+.submitsearch {
+    float: right;
+    background: transparent;
+    border: 0;
+    position: relative;
+    right: 30px;
+    top: 4px;
+    padding: 0;
+}
+
+.bottom_menu {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    cursor: pointer;
+}
+
+.bottom_menu_a {
+    background-color: rgb(59, 89, 152);
+    height: 50px;
+    position: fixed;
+    width: 25%;
+    grid-column-start: 1;
+}
+
+.bottom_menu_b {
+    background-color: rgb(29, 161, 242);
+    height: 50px;
+    position: fixed;
+    right: 25%;
+    width: 25%;
+}
+
+.bottom_menu_c {
+    background-color: rgb(115, 138, 141);
+    height: 50px;
+    position: fixed;
+    right: 50%;
+    width: 25%;
+}
+
+.bottom_menu_d {
+    background-color: rgb(255, 101, 80);
+    height: 50px;
+    position: fixed;
+    right: 75%;
+    width: 25%;
+}
+
+.first_section {
+    padding: 50px 40px;
+    min-height: 400px;
+    background-image: url("../img/80411-ryzen-embedded-orange-bkgd-v1-1920x800.jpg");
+}
+
+.youtube_video {
+    float: left;
+    display: inline;
+}
+
+.description {
+    font-size: 70px;
+    color: #FFFFFF;
+    display: inline;
+    float: left;
 }
