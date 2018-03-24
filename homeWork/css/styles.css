@@ -50,14 +50,14 @@ table {
 
 /*---------------------------------------*/
 
-@media (max-width: 1077px) {
+@media (max-width: 1080px) {
     .navbar-ul {
         display: none;
     }
 }
 
 @media (max-width: 992px) {
-    body header {
+    body header, .submitsearch {
         display: none;
     }
 }
@@ -69,7 +69,14 @@ table {
 }
 
 @media (min-width: 992px) {
-    .navbuton, .bottom_menu {
+    .navbuton, .icon-bar {
+        visibility: hidden;
+    }
+
+}
+
+@media (min-width: 980px) {
+    .bottom_menu > nav {
         display: none;
     }
 }
@@ -88,10 +95,10 @@ header {
 }
 
 .header_div {
-    height: 38px;
-    display: block;
-    border-bottom: 2px solid #636466;
     background: #000000;
+    border-bottom: 2px solid #636466;
+    display: block;
+    height: 38px;
     padding: 0 40px;
 }
 
@@ -102,27 +109,27 @@ header {
 
 .header_div #block-languageswitcher h2 {
     color: #FFFFFF;
+    cursor: pointer;
     font-family: "Noto Sans", sans-serif;
     font-size: 13px;
-    transition: all 0.2s ease;
+    line-height: 17px;
+    margin: 0;
     padding: 10px 20px;
     text-align: right;
-    margin: 0;
-    cursor: pointer;
-    line-height: 17px;
+    transition: all 0.2s ease;
 }
 
 .header_div #block-languageswitcher:hover h2 {
-    color: #000000;
     background-color: #FFFFFF;
+    color: #000000;
 }
 
 .header_div #block-languageswitcher h2:after {
     content: url("../img/f0d7_white.svg");
+    font-size: 12px;
     position: absolute;
     right: 5px;
     top: 12px;
-    font-size: 12px;
 }
 
 .header_div #block-languageswitcher:hover h2:after {
@@ -130,17 +137,17 @@ header {
 }
 
 .header_div #block-languageswitcher .links {
-    padding: 0;
+    background-color: white;
+    display: none;
+    font-size: 14px;
+    list-style: none;
     min-width: 168px;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
     right: 0;
     text-align: center;
     top: 37px;
-    position: absolute;
-    display: none;
-    overflow: hidden;
-    list-style: none;
-    font-size: 14px;
-    background-color: white;
     transition: max-height 0.25s ease-in;
 }
 .header_div #block-languageswitcher:hover .links {
@@ -148,21 +155,21 @@ header {
 }
 
 .header_div #block-languageswitcher .links li {
-    font-size: 15px;
-    transition: all 0.2s ease;
-    text-transform: uppercase;
+    color: black;
+    display: block;
     font-family: "Klavika Condensed Italic", Calibri, Arial, sans-serif;
+    font-size: 15px;
+    font-style: italic;
     font-weight: normal;
     list-style-type: none;
-    color: black;
-    font-style: italic;
-    padding: 11px 20px;
     margin: 4px 0;
-    display: block;
+    padding: 11px 20px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
 }
 .header_div #block-languageswitcher .links li:hover {
-    color: white;
     background-color: black;
+    color: white;
 }
 
 .header_div #block-secondarymenu {
@@ -176,19 +183,19 @@ header {
 }
 
 .header_div #block-secondarymenu ul li a {
-    padding: 10px 18px;
-    display: block;
-    margin: 0;
     color: #FFFFFF;
+    display: block;
     font-family: "Noto Sans", sans-serif;
     font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    padding: 10px 18px;
     transition: all 0.2s ease;
     text-decoration: none;
-    line-height: 18px;
 }
 .header_div #block-secondarymenu ul li:hover a {
-    color: #000000;
     background-color: #FFFFFF;
+    color: #000000;
 }
 
 
@@ -198,16 +205,16 @@ header {
 .region-navigation {
     align-content: right;
     background-color: black;
-    display: inline-block;
-    width: 100%;
-    padding: 23px 40px 12px;
     box-sizing: border-box;
+    display: inline-block;
+    padding: 23px 40px 12px;
+    width: 100%;
 }
 
 .main_logo {
     float: left;
-    width: 140px;
     margin-right: 30px;
+    width: 140px;
 }
 
 .block-amd-main-menu {
@@ -227,10 +234,10 @@ header {
     font-family: "Noto Sans", sans-serif;
     font-size: 18px;
     font-weight: bold;
-    text-transform: uppercase;
     text-decoration: none;
-    white-space: nowrap;
+    text-transform: uppercase;
     transition: all 0.2s ease;
+    white-space: nowrap;
 }
 
 .navbar-ul li {
@@ -244,22 +251,23 @@ header {
 }
 
 .navbar-ul > li > a {
-    vertical-align: bottom;
-    padding: 10px 18px;
-    line-height: 22px;
     display: block;
+    line-height: 22px;
+    padding: 10px 18px;
+    vertical-align: bottom;
 }
+
 .navbar-ul > li:hover > a {
     background: #FFFFFF;
     color: #000000;
 }
 
 .navbar-ul > li > div {
+    background: #FFFFFF;
     display: none;
-    position: absolute;
     min-width: 270px;
     opacity: 0.85;
-    background: #FFFFFF;
+    position: absolute;
 }
 .navbar-ul > li:hover > div {
     display: block;
@@ -276,93 +284,170 @@ header {
 .navbar-ul > li > div > ul > li > a {
     color: #000000;
 }
+
 .navbar-ul > li > div > ul > li:hover > a {
     color: #FFFFFF;
 }
 
 
 
+.navbuton {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 14px 11px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.icon-bar {
+    background-color: #FFFFFF;
+    height: 4px;
+    margin: 3px 0;
+    width: 30px;
+}
 
 
 
 
 .navsearch {
-    float: right;
-    position: relative;
-    border: 1px solid white;
-    height: 30px;
-    padding: 0 25px 0 10px;
-    width: 235px;
-    line-height: 30px;
-    font-family: "Noto Sans",sans-serif;
     background: transparent;
+    border: 1px solid white;
     color: #FFFFFF;
+    float: right;
+    font-family: "Noto Sans",sans-serif;
+    height: 30px;
+    line-height: 30px;
+    margin: 6px -27px 0px 0px;
+    padding: 0 25px 0 10px;
+    position: relative;
+    width: 235px;
 }
 
 .submitsearch {
-    float: right;
     background: transparent;
     border: 0;
-    position: relative;
-    right: 30px;
-    top: 4px;
+    float: right;
     padding: 0;
+    position: relative;
+    top: 10px;
 }
 
 .bottom_menu {
-    height: 50px;
-    width: 100%;
+    background: #FFFFFF;
+    bottom: 0;
+    display: flex;
+    padding: 1px 0 0;
     position: fixed;
-    bottom: 0px;
+    width: 100%;
+}
+
+.bottom_menu > nav {
     cursor: pointer;
+    flex-grow: 1;
+}
+
+.bottom_menu > nav > img {
+    align-self: center;
+    display: block;
+    height: 18px;
+    margin: 15px auto;
+    width: 18px;
 }
 
 .bottom_menu_a {
     background-color: rgb(59, 89, 152);
-    height: 50px;
-    position: fixed;
-    width: 25%;
-    grid-column-start: 1;
 }
 
 .bottom_menu_b {
     background-color: rgb(29, 161, 242);
-    height: 50px;
-    position: fixed;
-    right: 25%;
-    width: 25%;
 }
 
 .bottom_menu_c {
     background-color: rgb(115, 138, 141);
-    height: 50px;
-    position: fixed;
-    right: 50%;
-    width: 25%;
 }
 
 .bottom_menu_d {
     background-color: rgb(255, 101, 80);
-    height: 50px;
-    position: fixed;
-    right: 75%;
-    width: 25%;
 }
+
+
 
 .first_section {
-    padding: 50px 40px;
-    min-height: 400px;
-    background-image: url("../img/80411-ryzen-embedded-orange-bkgd-v1-1920x800.jpg");
-}
-
-.youtube_video {
-    float: left;
-    display: inline;
-}
-
-.description {
-    font-size: 70px;
+    background: url("../img/76955-ryzen-raven-AM4-background-1920x600_0.jpg") center;
+    background-size: auto 100%;
     color: #FFFFFF;
-    display: inline;
-    float: left;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    padding: 0 40px;
+}
+
+.fs_main_context {
+    height: auto;
+    max-width: 550px;
+}
+
+.fs_main_context > img {
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+}
+
+.fs_description {
+    margin: auto;
+    padding: 15px;
+    width: 100%;
+}
+.fs_description > article > h2 {
+    font-family: "Klavika Medium Condensed",Calibri,Arial,sans-serif;
+    line-height: 30px;
+    font-size: 22px;
+    font-weight: 500;
+}
+.fs_description > article > p {
+    font-size: 20px;
+    line-height: 23px;
+    margin: 15px 0 0;
+}
+
+.fs_button_1 {
+    background-color: transparent;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    display: block;
+    font-size: 20px;
+    height: 46px;
+    margin: 15px 0;
+    text-transform: uppercase;
+    width: 200px;
+}
+.fs_button_1:hover {
+    background-color: #808080;
+    border: 1px solid #000000;
+    color: #000000;
+}
+
+@media only screen and (max-width: 767px) {
+    .fs_description > article > h2 {
+        font-size: 34px;
+    }
+}
+
+@media (min-width: 992px) {
+    .first_section {
+        flex-flow: row nowrap;
+    }
+    .fs_main_context {
+        height: auto;
+        min-width: 50%;
+    }
+    .fs_description {
+        width: 50%;
+    }
 }
