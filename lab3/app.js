@@ -1,3 +1,5 @@
+import { getResponse }  from './apiService'
+
 (function () {
     let input = document.getElementById('input');
     input.addEventListener('keyup', function (event) {
@@ -35,12 +37,7 @@
     let query = function () {
         clearPage();
         let login = document.getElementById('input').value;
-        fetch('https://api.github.com/users/' + login).then(function (response, user) {
-            if (response.status >= 200 && response.status < 400)
-                return response.json();
-            if (response.status === 404)
-                return Promise.reject(new Error('User not found!'));
-        }).then(user => {
+        getResponse(login).then(user => {
             funcForAddidTags(user);
         }).catch((err) => {
             showErrors(err);
