@@ -1,0 +1,83 @@
+section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+input {
+    font-size: 17px;
+}
+
+.button {
+    margin: 0 0 0 10px;
+    border: 1px solid #000000;
+    padding: 7px;
+}
+.button:hover {
+    cursor: pointer;
+}
+
+.query {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.additional {
+    width: 300px;
+}
+
+.avatar {
+    height: auto;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.name {
+    font-size: 20px;
+}
+
+.bold, .name {
+    font-weight: 600;
+}
+
+.bio {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #b8b9b8;
+}
+
+.company::before {
+    content: url("../img/if_group_309042.svg");
+}
+
+.location::before {
+    content: url("../img/if_basics-23_296811.svg");
+}
+
+.blog {
+    text-decoration: none;
+    color: #1c02de;
+}
+.blog:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.blog::before {
+    content: url("../img/if_link_2199090.svg");
+}
+
+.email::before {
+    content: url("../img/if_mail_314900.svg");
+}
+
+.company::before, .location::before, .blog::before, .email::before {
+    display: inline-block;
+    height: 16px;
+    margin: 0 5px;
+    width: 16px;
+}
