@@ -7,6 +7,9 @@ function getApi(url) {
             if (response.status === 404){
                 return Promise.reject(new Error('User not found!'));
             }
+            if (response.status >= 400){
+                return Promise.reject(new Error('Client or Server error!'));
+            }
         }))
 }
 
