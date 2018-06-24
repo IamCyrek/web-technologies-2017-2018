@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdditionalUserInfo component test Search component rendered succesfully 1`] = `
+<Connect(SearchComponent)
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <SearchComponent
+    fetchAllReposRequest={[Function]}
+    fetchOrgsRequest={[Function]}
+    fetchUserRequest={[Function]}
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <div>
+      <div
+        className="Search"
+      >
+        <input
+          id="inputText"
+          onChange={[Function]}
+          placeholder="Username"
+          type="text"
+        />
+        <button
+          className="button"
+          onClick={[Function]}
+        >
+          Search User
+        </button>
+      </div>
+      <div
+        className="Search"
+      >
+        <input
+          id="inputText"
+          onChange={[Function]}
+          placeholder="Repository Name"
+          type="text"
+        />
+        <button
+          className="button"
+          onClick={[Function]}
+        >
+          Search Repository
+        </button>
+      </div>
+    </div>
+  </SearchComponent>
+</Connect(SearchComponent)>
+`;

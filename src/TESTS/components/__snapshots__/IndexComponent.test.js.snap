@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index component test Index component rendered succesfully 1`] = `
+<React.Fragment>
+  <Connect(SearchComponent)
+    className="SearchComponent"
+  />
+  <Connect(MainUserInfoComponent) />
+  <Connect(BioComponent) />
+  <Connect(AdditionalUserInfoComponent) />
+  <Connect(OrganizationsComponent) />
+  <Connect(AllReposFind) />
+</React.Fragment>
+`;

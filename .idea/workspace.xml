@@ -1,50 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e224201d-4ca1-4d90-9916-c6dca25ee000" name="Default" comment="">
+    <list default="true" id="e224201d-4ca1-4d90-9916-c6dca25ee000" name="Default" comment="new branch">
+      <change beforePath="" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/favicon.ico" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/manifest.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/App.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/App.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/App.test.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Constants.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/Index.test.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/__snapshots__/Index.test.js.snap" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/actions.test.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/AdditionalUserInfoComponent.test.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/AllReposFind.test.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/BioComponent.test.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/FollowersComponent.test.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/IndexComponent.test.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/MainUserInfoComponent.test.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/OrganizationsComponent.test.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/ReposComponent.test.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/SearchComponent.test.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/StarsGrowReposComponent.test.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/__snapshots__/AdditionalUserInfoComponent.test.js.snap" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/__snapshots__/AllReposFind.test.js.snap" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/__snapshots__/BioComponent.test.js.snap" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/__snapshots__/FollowersComponent.test.js.snap" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/__snapshots__/IndexComponent.test.js.snap" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/__snapshots__/MainUserInfoComponent.test.js.snap" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/__snapshots__/OrganizationsComponent.test.js.snap" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/__snapshots__/ReposComponent.test.js.snap" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/__snapshots__/SearchComponent.test.js.snap" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/components/__snapshots__/StarsGrowReposComponent.test.js.snap" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/TESTS/reducers.test.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/actions/actions.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/actions/saga.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/AdditionalUserInfoComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/AllReposFind.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/BioComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/FollowersComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/IconComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/IndexComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/MainUserInfoComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/OrganizationsComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/RepositoriesComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/SearchComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/StarsGrowReposComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/TabStarsGrowReposComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/TabsComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/TextAreaComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/index.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logo.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/reducers/ReducerAllRepos.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/reducers/ReducerFollowers.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/reducers/ReducerOrgs.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/reducers/ReducerRepos.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/reducers/ReducerStarsGrowRepos.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/reducers/ReducerTextArea.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/reducers/ReducerUser.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/reducers/Store.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/registerServiceWorker.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/requsets/Requests.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/main.8bcf2827.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/main.8bcf2827.js.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/main.c5f540d9.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/main.c5f540d9.js.map" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Constants.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/actions/actions.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/actions/saga.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/AdditionalUserInfoComponent.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/AllReposFind.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/BioComponent.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/FollowersComponent.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/IconComponent.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/IndexComponent.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainUserInfoComponent.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/OrganizationsComponent.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/RepositoriesComponent.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchComponent.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/StarsGrowReposComponent.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/TabStarsGrowReposComponent.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/TabsComponent.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/TextAreaComponent.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/ReducerAllRepos.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/ReducerFollowers.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/ReducerOrgs.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/ReducerRepos.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/ReducerStarsGrowRepos.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/ReducerTextArea.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/ReducerUser.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/Store.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/registerServiceWorker.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/requsets/Requests.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.8bcf2827.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.8bcf2827.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.c5f540d9.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.c5f540d9.js.map" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -69,6 +93,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
@@ -136,12 +163,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529864291086</updated>
-      <workItem from="1529864292463" duration="50000" />
+      <workItem from="1529864292463" duration="477000" />
     </task>
+    <task id="LOCAL-00001" summary="new branch">
+      <created>1529864352933</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1529864352933</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50000" />
+    <option name="totallyTimeSpent" value="477000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
@@ -150,11 +185,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -171,6 +206,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="new branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="new branch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
