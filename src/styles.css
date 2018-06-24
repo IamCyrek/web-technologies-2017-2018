@@ -1,0 +1,191 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/******************Main code*****************/
+
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+.inputs_header{
+    align-items: center;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.inputs_header input{
+    background-color: rgba(255,255,255,0.225);
+    border: none;
+    color: #fff;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.inputs_header button{
+    background-color: rgba(255,255,255,0.350);
+    border: none;
+    color: #fff;
+    padding: 5px;
+}
+
+.inputs_header img{
+    width: 50px;
+}
+
+.mainContent{
+    display: flex;
+    width: 100%;
+}
+
+.main_info{
+    align-items: center;
+    display: flex;
+    width: 40%;
+}
+
+.userIcons{
+    float:left;
+    margin-right: 10px;
+}
+
+.user_avatar{
+    border-radius: 5px;
+}
+
+.user_name{
+    font-size: 36px;
+    font-weight: 600;
+    margin: 20px 15px 20px 0;
+}
+
+.user_login{
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    margin: 20px 15px 20px 0;
+}
+
+.user_bio{
+    border-bottom: 2px solid #8b888a;
+    font-size: 18px;
+    margin: 0 15px 20px 0;
+    padding-bottom: 20px;
+    width: 460px;
+}
+
+.user_location{
+    font-size: 18px;
+    margin: 0 15px 20px 0;
+}
+
+.user_company{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 15px 20px 0;
+}
+
+.user_link{
+    text-decoration: none;
+}
+
+.userInfo{
+    margin: 20px 20px;
+}
+
+.tab_container{
+    margin-right: 25px;
+}
+
+.editableTab{
+    display: flex;
+    flex-direction: column;
+}
+
+.ulTabButtons{
+    border-bottom: 2px solid #8b888a;
+    display: flex;
+}
+
+.tabButton{
+    background-color: #fff;
+    border: none;
+    padding: 20px 30px;
+}
+
+.tabButton:focus{
+    outline: none;
+}
+
+.radioLabel{
+
+}
+
+.radioTabButton{
+    color: #000;
+    cursor: pointer;
+    padding: 20px 30px;
+    text-decoration: none;
+}
+
+.radioTabButton:focus-within{
+    border-bottom: 2px solid #f00;
+}
+
+.editButton{
+    background-color: #fff;
+    border: 3px solid #8b888a;
+    height: 60px;
+    outline: none;
+    margin: 15px 0 15px auto;
+    width: 30%;
+}
+
+.main_info{
+    display: flex;
+    flex-direction: column;
+}
