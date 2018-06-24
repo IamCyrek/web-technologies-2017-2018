@@ -2,8 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05976358-ac47-427c-b55d-186d1e8a9b81" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/favicon.ico" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/manifest.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/App.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/App.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/App.test.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Constants.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/actions/actions.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/actions/saga.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/AdditionalUserInfoComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/AllReposFind.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/BioComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/FollowersComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/IconComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/IndexComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/MainUserInfoComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/OrganizationsComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/RepositoriesComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/SearchComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/StarsGrowReposComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/TabStarsGrowReposComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/TabsComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/TextAreaComponent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/index.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logo.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/reducers/ReducerAllRepos.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/reducers/ReducerFollowers.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/reducers/ReducerOrgs.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/reducers/ReducerRepos.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/reducers/ReducerStarsGrowRepos.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/reducers/ReducerTextArea.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/reducers/ReducerUser.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/reducers/Store.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/registerServiceWorker.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/requsets/Requests.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/main.8bcf2827.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/main.8bcf2827.js.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/main.c5f540d9.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/main.c5f540d9.js.map" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -99,7 +140,7 @@
       <option name="presentableId" value="Default" />
       <updated>1529848421745</updated>
       <workItem from="1529848423036" duration="249000" />
-      <workItem from="1529861252482" duration="537000" />
+      <workItem from="1529861252482" duration="765000" />
     </task>
     <task id="LOCAL-00001" summary="React / redux">
       <created>1529848655865</created>
@@ -115,16 +156,23 @@
       <option name="project" value="LOCAL" />
       <updated>1529861364187</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Redux Saga">
+      <created>1529861825733</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1529861825733</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="786000" />
+    <option name="totallyTimeSpent" value="1014000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24981412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24981412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -132,7 +180,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -153,7 +201,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="React / redux" />
     <MESSAGE value="new branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="new branch" />
+    <MESSAGE value="Redux Saga" />
+    <option name="LAST_COMMIT_MESSAGE" value="Redux Saga" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
