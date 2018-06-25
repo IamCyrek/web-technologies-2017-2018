@@ -12,8 +12,12 @@ const getSuccess = (result, dispatch) => {
             userSocial: result.blog,
             isError: false,
             followersUrl: result.followers_url,
+            followingUrl: result.following_url,
             reposUrl: result.repos_url,
-            organizationsUrl: result.organizations_url
+            organizationsUrl: result.organizations_url,
+            numberOfPublicRepos: result.public_repos,
+            numberOfFollowers: result.followers,
+            numberOfFollowing: result.following,
         }
     })
 };

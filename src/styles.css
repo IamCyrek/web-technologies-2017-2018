@@ -176,15 +176,6 @@ body{
     border-bottom: 2px solid #f00;
 }
 
-.editButton{
-    background-color: #fff;
-    border: 3px solid #8b888a;
-    height: 60px;
-    outline: none;
-    margin: 15px 0 15px auto;
-    width: 30%;
-}
-
 .main_info{
     display: flex;
     flex-direction: column;

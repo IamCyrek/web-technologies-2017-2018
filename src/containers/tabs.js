@@ -1,12 +1,13 @@
-import {changeTab, editTab, setContent} from "../actions/tabs";
+import {changeTab, setContent} from "../actions/tabs";
 import {connect} from "react-redux";
 import React from "react";
-import {EditableTab} from '../components/tabs-components'
+import {TabsComponents} from '../components/tabs-components'
 import {Link, Switch, Route, withRouter} from 'react-router-dom';
 import Followers from './followers';
+import Following from './following';
 import Repos from './repos';
 import Organizations from './organizations';
-import {getFollowers, getOrganizations, getRepos} from "../actions/other_info";
+import {getFollowers, getFollowing, getOrganizations, getRepos} from "../actions/other_info";
 
 function RouteLinks(props) {
     return (
@@ -22,9 +23,15 @@ function RouteLinks(props) {
             </li>
             <li className='tabButton'>
                 <Link className='radioTabButton' to='/followers' onClick={props.getFollowers}>Followers</Link>
+                <h1 className='radioTabNumber'>{props.numOfFollowers}</h1>
+            </li>
+            <li className='tabButton'>
+                <Link className='radioTabButton' to='/following' onClick={props.getFollowing}>Following</Link>
+                <h1 className='radioTabNumber'>{props.numOfFollowing}</h1>
             </li>
             <li className='tabButton'>
                 <Link className='radioTabButton' to='/repos' onClick={props.getRepos}>Repositories</Link>
+                <h1 className='radioTabNumber'>{props.numOfPublicRepos}</h1>
             </li>
             <li className='tabButton'>
                 <Link className='radioTabButton' to='/organizations' onClick={props.getOrganizations}>Organizations</Link>
@@ -38,12 +45,22 @@ class UserTabs extends React.Component{
         return (
             <div className='tab_container'>
                 <nav>
-                    <RouteLinks changeTab={this.props.changeTab} getFollowers={this.props.getFollowers} getRepos={this.props.getRepos} getOrganizations={this.props.getOrganizations}/>
+                    <RouteLinks changeTab={this.props.changeTab}
+                                getFollowers={this.props.getFollowers}
+                                numOfFollowers={this.props.store.userInfo.numberOfFollowers}
+                                getFollowing={this.props.getFollowing}
+                                numOfFollowing={this.props.store.userInfo.numberOfFollowing}
+                                getRepos={this.props.getRepos}
+                                numOfPublicRepos={this.props.store.userInfo.numberOfPublicRepos}
+                                getOrganizations={this.props.getOrganizations}
+                                />
                 </nav>
                 <Switch>
-                    <Route exact path='/' render={() => <EditableTab readOnly={this.props.store.tabs.notEditable} onClick={this.props.editTab}
-                                 text={this.props.store.tabs} currentTab={this.props.store.tabs.currentTab} onChange={this.props.setContent}/>}/>
+                    <Route exact path='/' render={() => <TabsComponents text={this.props.store.tabs}
+                                                                        currentTab={this.props.store.tabs.currentTab}
+                                                                        onChange={this.props.setContent}/>}/>
                     <Route path='/followers' component={Followers}/>
+                    <Route path='/following' component={Following}/>
                     <Route path='/repos' component={Repos}/>
                     <Route path='/organizations' component={Organizations}/>
                 </Switch>
@@ -56,10 +73,10 @@ export default withRouter(connect(
     state => ({store: state}),
     dispatch => ({
         changeTab: (e) => dispatch(changeTab(e)),
-        editTab: (e) => dispatch(editTab(e)),
         setContent: (e) =>dispatch(setContent(e)),
         getRepos: () => {dispatch(getRepos())},
         getFollowers: () => {dispatch(getFollowers())},
+        getFollowing: () => {dispatch(getFollowing())},
         getOrganizations: () => {dispatch(getOrganizations())}
     })
 )(UserTabs));

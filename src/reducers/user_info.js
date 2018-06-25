@@ -8,6 +8,9 @@ const initialState = {
     userEmail: '',
     userSocial: '',
     isError: false,
+    numberOfPublicRepos: '',
+    numberOfFollowers: '',
+    numberOfFollowing: '',
     errName: '',
     isLoaded: false
 };
@@ -21,7 +24,7 @@ export default function getInfo(state = initialState, action) {
             return Object.assign({}, state, {isError: action.isError, errName: action.errName})
         }
         case 'SERVER_ERROR':{
-            return Object.assign({},state,{isError: action.isError, errName: action.errName})
+            return Object.assign({}, state, {isError: action.isError, errName: action.errName})
         }
         default:{
             return state;

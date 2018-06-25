@@ -1,5 +1,6 @@
 const initialState = {
     followers: [],
+    following: [],
     repos: [],
     organizations: []
 };
@@ -14,6 +15,11 @@ export default function getOtherInfo(state = initialState, action) {
         case 'FETCH_FOLLOWERS_SUCCESS':{
             return Object.assign({}, state, {
                 followers: action.followers
+            })
+        }
+        case 'FETCH_FOLLOWING_SUCCESS':{
+            return Object.assign({}, state, {
+                following: action.following
             })
         }
         case 'FETCH_ORGANIZATIONS_SUCCESS':{

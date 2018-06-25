@@ -1,5 +1,5 @@
 function get(url, myHeaders) {
-    return fetch(url,{
+    return fetch(url.replace(/\s?\{[^}]+\}/g, ''), {
         method: 'GET',
         headers: myHeaders,
         mode: 'cors',

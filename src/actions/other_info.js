@@ -1,5 +1,5 @@
 import GitHubAPI from '../services/githubAPI';
-import store from '../index';
+import store from '../store/store';
 
 export const getRepos = () => (dispatch) => {
     if (store.getState().userInfo.reposUrl){
@@ -28,6 +28,23 @@ export const getFollowers = () => (dispatch) => {
                 dispatch({
                     type: 'FETCH_FOLLOWERS_SUCCESS',
                     followers: result
+                })
+            }
+        )
+    }
+    return null;
+};
+
+export const getFollowing = () => (dispatch) => {
+    if (store.getState().userInfo.followingUrl){
+        GitHubAPI.getOtherInfo(store.getState().userInfo.followingUrl).then(
+            (res) => {
+                const result = res.map((element) => {
+                    return element.login;
+                });
+                dispatch({
+                    type: 'FETCH_FOLLOWING_SUCCESS',
+                    following: result
                 })
             }
         )

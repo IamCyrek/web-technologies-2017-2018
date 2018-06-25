@@ -1,4 +1,4 @@
-import store from '../index';
+import store from '../store/store';
 
 function changeTab(e) {
     return {
@@ -7,11 +7,6 @@ function changeTab(e) {
     }
 }
 
-function editTab() {
-    return {
-        type: 'EDIT_TAB'
-    }
-}
 
 function setContent(e) {
     return {
@@ -21,4 +16,4 @@ function setContent(e) {
     }
 }
 
-export {changeTab, editTab, setContent};
+export {changeTab, setContent};
