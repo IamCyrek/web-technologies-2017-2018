@@ -4,7 +4,7 @@ const constants = require('./config/constants');
 
 const app = express();
 app.use(router);
-const server = app.listen(constants.PORT, () => console.log(constants.API_START));
+const server = app.listen(constants.PORT || 5000, () => console.log(constants.API_START));
 
 setInterval(() => server.getConnections(
   (err, connections) => console.log(`${connections}${constants.CONNECTIONS_OPEN}`),
