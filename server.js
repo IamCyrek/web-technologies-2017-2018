@@ -1,21 +1,29 @@
-const express = require('express');
-const router = require('./routes/index');
-const constants = require('./config/constants');
+const express = require("express");
+const router = require("./routes/index");
+const constants = require("./config/constants");
 
 const app = express();
 app.use(router);
-const server = app.listen(process.env.PORT || constants.PORT, () => console.log(constants.API_START));
+const server = app.listen(process.env.PORT || constants.PORT, () =>
+  console.log(constants.API_START)
+);
 
-setInterval(() => server.getConnections(
-  (err, connections) => console.log(`${connections}${constants.CONNECTIONS_OPEN}`),
-), constants.SECOND);
+setInterval(
+  () =>
+    server.getConnections((err, connections) =>
+      console.log(`${connections}${constants.CONNECTIONS_OPEN}`)
+    ),
+  constants.SECOND
+);
 
 let connections = [];
 
-server.on(constants.CONNECTION, (connection) => {
+server.on(constants.CONNECTION, connection => {
   connections.push(connection);
-  connection.on(constants.CLOSE,
-    () => connections = connections.filter(curr => curr !== connection));
+  connection.on(
+    constants.CLOSE,
+    () => (connections = connections.filter(curr => curr !== connection))
+  );
 });
 
 function shutDown() {
@@ -31,7 +39,10 @@ function shutDown() {
   }, constants.TEN_SECONDS);
 
   connections.forEach(curr => curr.end());
-  setTimeout(() => connections.forEach(curr => curr.destroy()), constants.FIVE_SECONDS);
+  setTimeout(
+    () => connections.forEach(curr => curr.destroy()),
+    constants.FIVE_SECONDS
+  );
 }
 
 process.on(constants.SIGTERM_SIGNAL, shutDown);

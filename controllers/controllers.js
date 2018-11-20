@@ -1,5 +1,5 @@
-const services = require('../services/services');
-const constants = require('../config/constants');
+const services = require("../services/services");
+const constants = require("../config/constants");
 
 const all = (req, res) => {
   res.send(services.getAll());
@@ -14,7 +14,12 @@ const title = (req, res) => {
 };
 
 const pagination = (req, res) => {
-  res.send(services.getByPagination(Number(req.params.offset), Number(req.params.limit)));
+  res.send(
+    services.getByPagination(
+      Number(req.params.offset),
+      Number(req.params.limit)
+    )
+  );
 };
 
 const sortingWithDirection = (req, res) => {
@@ -32,5 +37,5 @@ module.exports = {
   title,
   pagination,
   sorting,
-  sortingWithDirection,
+  sortingWithDirection
 };
