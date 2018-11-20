@@ -20,13 +20,9 @@ function getByPagination(offset, limit) {
 function getBySorting(field, direction) {
   const list = movies.sort((a, b) => String(a[field]).localeCompare(String(b[field])));
 
-  if (!String(direction).toLowerCase().localeCompare(constants.ASCENDING_ORDER)) return list;
+  if (direction === constants.ASCENDING_ORDER) return list;
 
-  if (!String(direction)
-    .toLowerCase()
-    .localeCompare(constants.DESCENDING_ORDER)) return list.reverse();
-
-  return [];
+  return list.reverse();
 }
 
 module.exports = {

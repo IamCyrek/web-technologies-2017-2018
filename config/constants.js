@@ -19,7 +19,7 @@ module.exports = {
   PATH_BY_TITLE: '/title/:title',
   PATH_BY_PAGINATION: '/pagination/:offset&:limit',
   PATH_BY_SORT: '/sort/:field',
-  PATH_BY_SORT_WITH_DIRECTION: '/sort/:field&:direction',
+  PATH_BY_SORT_WITH_DIRECTION: '/sort/:field/:direction',
   ASCENDING_ORDER: 'asc',
   DESCENDING_ORDER: 'desc',
 };
