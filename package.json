@@ -2,7 +2,7 @@
   "name": "lab7",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "express": "^4.16.4"
   },
