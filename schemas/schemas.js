@@ -19,8 +19,8 @@ module.exports = {
         .required()
     }),
 
-    nameSchema: Joi.object().keys({
-      name: Joi.string().required()
+    titleSchema: Joi.object().keys({
+      title: Joi.string().required()
     }),
 
     pagSchema: Joi.object().keys({

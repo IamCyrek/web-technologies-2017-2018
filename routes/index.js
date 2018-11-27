@@ -13,7 +13,7 @@ router.get(
 );
 router.get(
   constants.PATH_BY_TITLE,
-  validateParams(schemas.nameSchema),
+  validateParams(schemas.titleSchema),
   controllers.title
 );
 router.get(
