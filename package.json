@@ -9,12 +9,9 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "controllers/*.js",
-      "coverage/*.js",
-      "routes/*.js",
-      "schemas/*.js",
-      "services/*.js",
-      "server.js"
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/coverage/**"
     ]
   },
   "devDependencies": {
