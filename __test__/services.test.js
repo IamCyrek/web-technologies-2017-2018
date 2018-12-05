@@ -121,7 +121,9 @@ describe("services", () => {
 
       expect(Array.isArray(movies)).toBe(true);
       expect(movies.length).toBeGreaterThan(1);
-      expect(movies[0].id < movies[1].id).toBe(true);
+
+      for (let i = 0; i < movies.size - 1; i++)
+        expect(movies[i].id < movies[i + 1].id).toBe(true);
     });
 
     test("isArray after sorting with field id and descending order", () => {
@@ -129,7 +131,9 @@ describe("services", () => {
 
       expect(Array.isArray(movies)).toBe(true);
       expect(movies.length).toBeGreaterThan(1);
-      expect(movies[0].id > movies[1].id).toBe(true);
+
+      for (let i = 0; i < movies.size - 1; i++)
+        expect(movies[i].id > movies[i + 1].id).toBe(true);
     });
   });
 });
