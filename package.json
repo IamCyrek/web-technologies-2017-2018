@@ -11,7 +11,9 @@
     "collectCoverageFrom": [
       "**/*.{js,jsx}",
       "!**/node_modules/**",
-      "!**/coverage/**"
+      "!**/coverage/**",
+      "!.*.js",
+      "!server.js"
     ]
   },
   "devDependencies": {
@@ -19,8 +21,9 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^3.0.0",
+    "jest": "^23.6.0",
     "prettier": "^1.15.2",
-    "jest": "^23.6.0"
+    "supertest": "^3.3.0"
   },
   "scripts": {
     "start": "node server.js",

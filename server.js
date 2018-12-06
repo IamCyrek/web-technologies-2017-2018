@@ -4,46 +4,51 @@ const constants = require("./config/constants");
 
 const app = express();
 app.use(router);
-const server = app.listen(process.env.PORT || constants.PORT, () =>
-  console.log(constants.API_START)
-);
 
-setInterval(
-  () =>
-    server.getConnections((err, connections) =>
-      console.log(`${connections}${constants.CONNECTIONS_OPEN}`)
-    ),
-  constants.SECOND
-);
-
-let connections = [];
-
-server.on(constants.CONNECTION, connection => {
-  connections.push(connection);
-  connection.on(
-    constants.CLOSE,
-    () => (connections = connections.filter(curr => curr !== connection))
+if (!module.parent) {
+  const server = app.listen(process.env.PORT || constants.PORT, () =>
+    console.log(constants.API_START)
   );
-});
 
-function shutDown() {
-  console.log(constants.API_CLOSE);
-  server.close(() => {
-    console.log(constants.CLOSED_OUT);
-    process.exit(constants.OK_CODE);
+  setInterval(
+    () =>
+      server.getConnections((err, connections) =>
+        console.log(`${connections}${constants.CONNECTIONS_OPEN}`)
+      ),
+    constants.SECOND
+  );
+
+  let connections = [];
+
+  server.on(constants.CONNECTION, connection => {
+    connections.push(connection);
+    connection.on(
+      constants.CLOSE,
+      () => (connections = connections.filter(curr => curr !== connection))
+    );
   });
 
-  setTimeout(() => {
-    console.error(constants.CLOSE_ERROR);
-    process.exit(constants.ERROR_CODE);
-  }, constants.TEN_SECONDS);
+  function shutDown() {
+    console.log(constants.API_CLOSE);
+    server.close(() => {
+      console.log(constants.CLOSED_OUT);
+      process.exit(constants.OK_CODE);
+    });
 
-  connections.forEach(curr => curr.end());
-  setTimeout(
-    () => connections.forEach(curr => curr.destroy()),
-    constants.FIVE_SECONDS
-  );
+    setTimeout(() => {
+      console.error(constants.CLOSE_ERROR);
+      process.exit(constants.ERROR_CODE);
+    }, constants.TEN_SECONDS);
+
+    connections.forEach(curr => curr.end());
+    setTimeout(
+      () => connections.forEach(curr => curr.destroy()),
+      constants.FIVE_SECONDS
+    );
+  }
+
+  process.on(constants.SIGTERM_SIGNAL, shutDown);
+  process.on(constants.SIGINT_SIGNAL, shutDown);
+} else {
+  module.exports = app;
 }
-
-process.on(constants.SIGTERM_SIGNAL, shutDown);
-process.on(constants.SIGINT_SIGNAL, shutDown);
