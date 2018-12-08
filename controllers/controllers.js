@@ -2,28 +2,29 @@ const services = require("../services/services");
 const constants = require("../config/constants");
 
 const all = (req, res) => {
-  res.send(services.getAll());
+  services.getAll().then(movies => res.send(movies));
 };
 
 const id = (req, res) => {
-  res.send(services.getById(Number(req.params.id)));
+  services.getById(Number(req.params.id)).then(movie => res.send(movie));
 };
 
 const title = (req, res) => {
-  res.send(services.getByTitle(String(req.params.title)));
+  services
+    .getByTitle(String(req.params.title))
+    .then(movies => res.send(movies));
 };
 
 const pagination = (req, res) => {
-  res.send(
-    services.getByPagination(
-      Number(req.params.offset),
-      Number(req.params.limit)
-    )
-  );
+  services
+    .getByPagination(Number(req.params.offset), Number(req.params.limit))
+    .then(movies => res.send(movies));
 };
 
 const sortingWithDirection = (req, res) => {
-  res.send(services.getBySorting(req.params.field, req.params.direction));
+  services
+    .getBySorting(req.params.field, req.params.direction)
+    .then(movies => res.send(movies));
 };
 
 const sorting = (req, res) => {

@@ -1,32 +1,32 @@
-const movies = require("../data.json");
 const constants = require("../config/constants");
+const Sequelize = require("sequelize");
+const model = require("../db/index");
 
 function getAll() {
-  return movies;
+  return model.movie.findAll();
 }
 
 function getById(id) {
-  return movies.find(item => item.id === id);
+  return model.movie.findById(id);
 }
 
 function getByTitle(title) {
-  return movies.filter(item =>
-    item.title.toLowerCase().includes(title.toLowerCase())
-  );
+  return model.movie.findAll({
+    where: Sequelize.where(Sequelize.fn("lower", Sequelize.col("title")), {
+      [Sequelize.Op.like]: "%" + title.toLowerCase() + "%"
+    })
+  });
 }
 
 function getByPagination(offset, limit) {
-  return movies.slice(offset, offset + limit);
+  return model.movie.findAll({ offset, limit });
 }
 
 function getBySorting(field, direction) {
-  const list = movies.sort((a, b) =>
-    String(a[field]).localeCompare(String(b[field]))
-  );
+  if (direction === constants.ASCENDING_ORDER)
+    return model.movie.findAll({ order: [[field, "ASC"]] });
 
-  if (direction === constants.ASCENDING_ORDER) return list;
-
-  return list.reverse();
+  return model.movie.findAll({ order: [[field, "DESC"]] });
 }
 
 module.exports = {
