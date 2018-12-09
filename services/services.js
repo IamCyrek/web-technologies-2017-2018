@@ -6,8 +6,9 @@ function getAll(cb) {
     if (err) {
       console.log(err);
       cb([]);
+    } else {
+      cb(movies);
     }
-    cb(movies);
   });
 }
 
@@ -16,8 +17,9 @@ function getById(id, cb) {
     if (err) {
       console.log(err);
       cb([]);
+    } else {
+      cb(movie);
     }
-    cb(movie);
   });
 }
 
@@ -29,8 +31,9 @@ function getByTitle(title, cb) {
     if (err) {
       console.log(err);
       cb([]);
+    } else {
+      cb(movies);
     }
-    cb(movies);
   });
 }
 
@@ -40,8 +43,9 @@ function getByPagination(offset, limit, cb) {
       if (err) {
         console.log(err);
         cb([]);
+      } else {
+        cb(movies);
       }
-      cb(movies);
     })
     .skip(offset)
     .limit(limit);
@@ -54,8 +58,24 @@ function getBySorting(field, direction, cb) {
     if (err) {
       console.log(err);
       cb([]);
+    } else {
+      cb(movies);
     }
-    cb(movies);
+  });
+}
+
+function postMovie(params) {
+  return db.saveMovie(params);
+}
+
+function deleteMovie(id, cb) {
+  db.movie.deleteOne({ id: id }, function(err, movies) {
+    if (err) {
+      console.log(err);
+      cb([]);
+    } else {
+      cb(movies);
+    }
   });
 }
 
@@ -64,5 +84,7 @@ module.exports = {
   getById,
   getByTitle,
   getByPagination,
-  getBySorting
+  getBySorting,
+  postMovie,
+  deleteMovie
 };

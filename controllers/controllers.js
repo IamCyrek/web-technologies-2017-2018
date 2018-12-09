@@ -35,12 +35,21 @@ const sortingWithDirection = (req, res) => {
   ) {
     res.send(movies);
   });
-  //res.send(services.getBySorting(req.params.field, req.params.direction));
 };
 
 const sorting = (req, res) => {
   req.params.direction = constants.ASCENDING_ORDER;
   sortingWithDirection(req, res);
+};
+
+const postMovie = (req, res) => {
+  res.send(services.postMovie(req.params));
+};
+
+const deleteMovie = (req, res) => {
+  services.deleteMovie(Number(req.params.id), function(movie) {
+    res.send(movie);
+  });
 };
 
 module.exports = {
@@ -49,5 +58,7 @@ module.exports = {
   title,
   pagination,
   sorting,
-  sortingWithDirection
+  sortingWithDirection,
+  postMovie,
+  deleteMovie
 };
