@@ -52,6 +52,14 @@ const deleteMovie = (req, res) => {
   });
 };
 
+const voteCountByGroupOriginalLanguageWhereAdultIsSet = (req, res) => {
+  services.voteCountByGroupOriginalLanguageWhereAdultIsSet(
+    Boolean(req.params.adult),
+    function(list) {
+      res.send(list);
+    }
+  );
+};
 module.exports = {
   all,
   id,
@@ -60,5 +68,6 @@ module.exports = {
   sorting,
   sortingWithDirection,
   postMovie,
-  deleteMovie
+  deleteMovie,
+  voteCountByGroupOriginalLanguageWhereAdultIsSet
 };

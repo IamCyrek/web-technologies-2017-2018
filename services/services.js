@@ -1,5 +1,6 @@
 const constants = require("../config/constants");
 const db = require("../db/index");
+const agr = require("../db/agr");
 
 function getAll(cb) {
   db.movie.find(function(err, movies) {
@@ -79,6 +80,12 @@ function deleteMovie(id, cb) {
   });
 }
 
+function voteCountByGroupOriginalLanguageWhereAdultIsSet(adultValue, cb) {
+  agr.findMoviesWithAggregation(function(movies) {
+    cb(movies);
+  });
+}
+
 module.exports = {
   getAll,
   getById,
@@ -86,5 +93,6 @@ module.exports = {
   getByPagination,
   getBySorting,
   postMovie,
-  deleteMovie
+  deleteMovie,
+  voteCountByGroupOriginalLanguageWhereAdultIsSet
 };
