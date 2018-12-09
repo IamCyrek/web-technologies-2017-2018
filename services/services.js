@@ -1,32 +1,62 @@
-const movies = require("../data.json");
 const constants = require("../config/constants");
+const db = require("../db/index");
 
-function getAll() {
-  return movies;
+function getAll(cb) {
+  db.movie.find(function(err, movies) {
+    if (err) {
+      console.log(err);
+      cb([]);
+    }
+    cb(movies);
+  });
 }
 
-function getById(id) {
-  return movies.find(item => item.id === id);
+function getById(id, cb) {
+  db.movie.find({ id: id }, function(err, movie) {
+    if (err) {
+      console.log(err);
+      cb([]);
+    }
+    cb(movie);
+  });
 }
 
-function getByTitle(title) {
-  return movies.filter(item =>
-    item.title.toLowerCase().includes(title.toLowerCase())
-  );
+function getByTitle(title, cb) {
+  db.movie.find({ title: { $regex: title, $options: "i" } }, function(
+    err,
+    movies
+  ) {
+    if (err) {
+      console.log(err);
+      cb([]);
+    }
+    cb(movies);
+  });
 }
 
-function getByPagination(offset, limit) {
-  return movies.slice(offset, offset + limit);
+function getByPagination(offset, limit, cb) {
+  db.movie
+    .find(function(err, movies) {
+      if (err) {
+        console.log(err);
+        cb([]);
+      }
+      cb(movies);
+    })
+    .skip(offset)
+    .limit(limit);
 }
 
-function getBySorting(field, direction) {
-  const list = movies.sort((a, b) =>
-    String(a[field]).localeCompare(String(b[field]))
-  );
-
-  if (direction === constants.ASCENDING_ORDER) return list;
-
-  return list.reverse();
+function getBySorting(field, direction, cb) {
+  var query = {};
+  query[field] = direction === constants.ASCENDING_ORDER ? 1 : -1;
+  db.movie.find({}, null, { sort: query }, function(err, movies) {
+    if (err) {
+      console.log(err);
+      cb([]);
+    }
+    cb(movies);
+  });
 }
 
 module.exports = {
